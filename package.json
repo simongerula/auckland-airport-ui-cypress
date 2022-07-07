@@ -1,5 +1,6 @@
 {
   "scripts": {
+    "cy:open": "cypress open",
     "cy:run:chrome": "cypress run -b chrome",
     "cy:run:chromium": "cypress run -b chromium",
     "cy:run:firefox": "cypress run -b firefox"
