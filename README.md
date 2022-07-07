@@ -1,9 +1,10 @@
-# aucklandAirportUiCypress
-Test suite on the https://www.aucklandairport.co.nz homepage with basic assertions in the UI
+# Auckland Airport UI Test with Cypress
+***
+### Test suite on the https://www.aucklandairport.co.nz homepage with basic assertions in the UI
 
 This framework is made with Cypress 10.3, POM structure and Mochawesome reports.
 
-It has eight tests:
+### It has eight tests:
 
 1. It should have 7 items on the navbar.
 2. It should have arrivals/depatures options on the search bar.
