@@ -1,0 +1,11 @@
+{
+  "scripts": {
+    "cy:run:chrome": "cypress run -b chrome",
+    "cy:run:chromium": "cypress run -b chromium",
+    "cy:run:firefox": "cypress run -b firefox"
+  },
+  "devDependencies": {
+    "cypress": "^10.3.0",
+    "mochawesome": "^7.1.3"
+  }
+}
