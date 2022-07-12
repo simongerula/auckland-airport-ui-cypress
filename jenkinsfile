@@ -1,0 +1,38 @@
+pipeline{
+    agent any
+
+    parameters{
+        string(name: "SPEC", defaultValue: "cypress/integration/**/**", description: "cypress/integration/**/**"),
+        choice(name: "BROWSER", choices: ['chrome', 'edge', 'firefox'], description: "Select browser:")
+    }
+
+    options {
+        ansiColor('xterm')
+    }
+
+    stages{
+        stage('Build'){
+            steps{
+                echo "Building application"
+            }
+        }
+        stage('Testing'){
+            steps{
+                sh "npm i"
+                sh "npm run cy:run:${BROWSER} --spec ${SPEC}"
+            }
+        }
+        stage('Deploy'){
+            steps{
+                echo "Deploying application"
+            }
+        }
+    }
+
+    post{
+        always{
+            publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: true, reportDir: 'cypress/report', reportFiles: 'index.html', reportName: 'HTML Report', reportTitles: ''])
+        }
+    }
+
+}
