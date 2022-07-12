@@ -1,6 +1,6 @@
 # Auckland Airport UI Test with Cypress
 ***
-### Test suite on the https://www.aucklandairport.co.nz homepage with basic assertions in the UI
+### Test suite on the https://www.aucklandairport.co.nz homepage with basic UI assertions and Jenkins Pipeline
 
 This framework is made with Cypress 10.3, POM structure and Mochawesome reports.
 
